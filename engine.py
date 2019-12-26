@@ -38,7 +38,7 @@ def create_summary(text):
         words_freq[word]=(words_freq[word]/max_freq)
     score=compute_score(sentence_list,words_freq)
     #summary
-    summary_sentence=heapq.nlargest(math.ceil(len(corpus)*0.15),score,key=score.get)
+    summary_sentence=heapq.nlargest(math.ceil(len(corpus)*0.30),score,key=score.get)
     summary=' '.join(summary_sentence)
     return summary
 
