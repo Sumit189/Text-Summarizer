@@ -68,4 +68,5 @@ def compute_score(sentence_list,words_freq):
 
 if __name__ == '__main__':
    webbrowser.open(os.getcwd()+'\web\Summarizer.html')
-   app.run(debug = True) 
+   app.run(debug = False)
+   
