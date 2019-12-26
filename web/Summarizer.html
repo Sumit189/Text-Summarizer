@@ -1,0 +1,52 @@
+<html> 
+   <body>       
+      <form id="myForm" action = "http://localhost:5000/Summarizer" method = "post"> 
+         <center><p id="Heading">Text Summarizer</p></center> 
+         <center><p><textarea name = "original_text" id="Field" placeholder="Enter Something"></textarea></p> </center>
+         <center><img src="send.png" id="Button" onclick="submit()"></center>
+      </form>       
+   </body> 
+   <script>
+       function submit(){
+       document.getElementById("myForm").submit();
+       }
+    </script>
+    <style>
+    body{
+        font-family: 'Open Sans', sans-serif;
+        background-image: linear-gradient(to bottom right, #FC575E,#90D5EC); 
+        background-repeat: no-repeat;
+    }
+    #Heading{
+    margin-top: 8vh;
+    margin-bottom: 5vh ;
+    color:#fff;
+    font-size:40px;
+    font-weight: bold;
+    }
+    #image{
+        height: 60px;
+        width: 60px;
+    }
+    #Field{
+    outline: none;
+    border-radius: 25px;
+    border: 2px solid #545454;
+    padding: 20px;
+    width: 50vw;
+    height: 50vh;
+    }
+    #Button{
+    margin-top: 0.3%;
+    z-index: 99;
+    height:70px ;
+    width: 70px;
+    outline: none;
+    border-radius: 50%;
+    }
+    #Button:hover{
+    transform: scale(1.1);
+    background-color: #90D5EC;
+}
+    </style>
+</html> 

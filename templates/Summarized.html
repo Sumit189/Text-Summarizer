@@ -1,0 +1,34 @@
+<html> 
+   <body>       
+         <center><p id="Heading">Summarized Text</p></center> 
+         <center><p><textarea name = "original_text" id="Field" placeholder="Enter Something">{{ name }}</textarea></p> </center>    
+   </body> 
+   <script>
+       function submit(){
+       document.getElementById("myForm").submit();
+       }
+    </script>
+    <style>
+    body{
+        font-family: 'Open Sans', sans-serif;
+        background-image: linear-gradient(to bottom right, #90D5EC,#FC575E); 
+        background-repeat: no-repeat;
+    }
+    #Heading{
+    margin-top: 8vh;
+    margin-bottom: 5vh ;
+    color:#fff;
+    font-size:40px;
+    font-weight: bold;
+    }
+    #Field{
+    font-size: 14px;
+    outline: none;
+    border-radius: 25px;
+    border: 2px solid #545454;
+    padding: 20px;
+    width: 50vw;
+    height: 50vh;
+    }
+    </style>
+</html> 
