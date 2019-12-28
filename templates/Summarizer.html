@@ -1,0 +1,121 @@
+<html>
+    <head>
+        <link rel="icon" href={{ icon_name }} type="image/gif" sizes="16x16">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+   <body>
+        <div id="popup_container">
+        <div id="popup">
+        <span class="close-button" onclick="closepopup()">&times;</span>
+        <h2 id="errormsg"></h2> 
+        </div>
+     </div>      
+      <form method = "post" id="myForm" > 
+         <center><p id="Heading">Text Summarizer</p></center> 
+         <center><p><textarea name = "original_text" id="Field" placeholder="Enter Something"></textarea></p> </center>
+         <center><img src={{ icon_name }} id="Button" onclick="submit_check()"></center>
+      </form>       
+   </body> 
+   <script>
+       $(document).ready(function() {
+         $("#Field").val('');
+        });
+       function submit_check(){
+        if($("#Field").val().trim().length < 1){
+        document.getElementById("errormsg").innerHTML="Please write a Paragraph.";
+	    document.getElementById("popup_container").style.visibility="visible";
+       }
+       else{ 
+       document.getElementById("myForm").submit();
+       }
+    }
+       //PopUp Error
+        function closepopup(){
+        document.getElementById("popup_container").style.visibility="hidden";
+        }
+    </script>
+    <style>
+    body{
+        font-family: 'Open Sans', sans-serif;
+        background-image: linear-gradient(to bottom right, #FC575E,#90D5EC); 
+        background-repeat: no-repeat;
+    }
+    #Heading{
+    margin-top: 8vh;
+    margin-bottom: 5vh ;
+    color:#fff;
+    font-size:40px;
+    font-weight: bold;
+    }
+    #image{
+        height: 60px;
+        width: 60px;
+    }
+    #Field{
+    outline: none;
+    border-radius: 25px;
+    border: 2px solid #545454;
+    padding: 20px;
+    width: 50vw;
+    height: 50vh;
+    }
+    #Button{
+    margin-top: 0.3%;
+    z-index: 99;
+    height:70px ;
+    width: 70px;
+    outline: none;
+    border-radius: 50%;
+    }
+    #popup_container{
+    visibility: hidden;
+    height:100vh;
+    width:100vw;
+    background: rgb(0,0,0,0.7);
+    z-index: 1;
+    position: absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    margin: auto;
+    }
+
+    #popup{
+    text-align: center;
+    border-radius: 20px;
+    height:150px;
+    width:600px;
+    background:#fff;
+    z-index: 1;
+    position: absolute;
+    left:0;
+    right: 0;
+    top:0;
+    bottom: 0;
+    margin: auto;
+    }
+    #errormsg{
+    color:#FC575E;
+    margin-top: 55px;
+    }
+    .close-button {
+        float: right;
+        margin-right: 10px;
+        margin-top: 10px;
+        width: 1.5rem;
+        line-height: 1.5rem;
+        text-align: center;
+        cursor: pointer;
+        border-radius: 0.25rem;
+        background-color: lightgray;
+    }
+    .close-button:hover {
+        background-color: darkgray; 
+    }
+    #Button:hover{
+    transform: scale(1.1);
+    background-color: #90D5EC;
+}
+    </style>
+</html> 
